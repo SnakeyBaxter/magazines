@@ -1,0 +1,407 @@
+/*This is the main style sheet of Contamination.*/
+
+/*Index Page-------------------------------------------------------------*/
+
+.myElement { 
+	/* Generated with http://gradient.quasi.ink */
+	background-size: cover;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAA2klEQVQYlV3MS3LCMBAAUe5/hKTyAQxYshRL45mRzOU6CxNDZdHL14fcldyVWDuhNG7Fuc6NIRmnyTlG4zssvOeFtyQc/sCkbUPSGWvb0OxccuecGh/zwvvPPzBpI1ojyAPKyigr19r5qs5nsVfgTOpE8w2pM2rfO1njqP4EUYWoQlAhqBHUGNX3Lu4MZq+gELU8wNZotjfYwmDLBpILyQvJheh1y5TguoOLVc5aniD3Su6VtFamLkxdCK57gxbOy8wh34W0VkLLTL1s4F6JXbj1ytXlcRdOS+UXNcVKh1mfgaQAAAAASUVORK5CYII=");
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.index{
+	margin-top: 50px;
+	font-size: 3.5em;
+	letter-spacing: 5px;
+}
+
+/*Index Navigation*/
+
+.nav {
+	margin-top: 40px;
+	padding: 2px;
+	color: #cc3300;
+	font-size: 20px;
+}
+
+.nav ul {
+	list-style: square;
+}
+
+div#banner {
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(15deg); /* Standard syntax */
+	margin-top: 600px;
+	height: auto;
+	max-width: 100%;
+}
+
+body {
+	/*background-color: #630000; */
+	color: #333333;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1em; 
+	margin: 0;
+}
+
+/*Film title---reviews*/
+h1 {
+	font-size: 2.5em;
+	letter-spacing: 5px;
+}
+
+/*Features----reviews*/
+h2 {
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+/*Navigation*/
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+p {
+	font-size: .9em;
+	text-align: justify;
+	line-height: 1.7em;
+}
+
+/*classes*/
+
+.blurb {
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+img{
+	border: none;
+	max-width: 100%;
+	height: auto;
+}
+
+img.floatLeft { 
+    float: left; 
+    margin: 15px; 
+	padding-bottom: 10px;
+}
+img.floatRight { 
+    float: right; 
+    margin: 4px; 
+}
+
+.center {
+   text-align: center;
+}
+
+
+/*links*/
+
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color:#000000;
+	text-decoration: underline;
+}
+
+a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color:#000000;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em; 
+	color:#920000;
+	text-decoration: underline;
+}
+
+a:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em; 
+	color: #FF0000;
+}
+
+/*lists*/
+ul {
+	list-style-type: circle;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #000000;
+}
+
+ol {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #000000;
+}
+
+#Wrapper {
+    background-color: #FFFFFF;
+	/*padding: 30px;*/
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto ;
+    margin-right: auto ;
+	width: 90%;
+}
+
+#IndexWrapper {
+   	padding: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto ;
+    margin-right: auto ;
+	width: 100%;
+}
+
+
+
+
+/*Introduction page-------------------------------------------------------------*/
+
+#LastFM {
+    float: right;
+	width: 225px;
+	text-align: center;
+			
+}
+/*reviews styles----------------------------------------------------------------------*/
+
+#Header {	
+	width: 100%;
+	background-color: #AA7539;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #000000;
+	color: #552E00/*#990000; */
+}
+
+#CreditsText {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 30px;
+	padding-bottom: 20px;
+	width: 75%;
+}
+
+
+#ReviewText {
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	text-align: justify;
+	padding: 5px;
+	width: 80%;
+}
+
+#FilmClips {
+	font-size: 1.1em;
+	text-align: center;
+	padding: 5px;
+	border: solid #ff0000 1px;
+}
+
+
+/*Images Reviews*/
+
+#PictureBox {
+	float: right;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#MenuBar{
+    position: relative;    
+	text-align: center;
+	line-height: 10px;
+	background-color: #AA7539;
+	color: #000000;
+	border-top: solid #000000 1px;
+	margin-top: 10px;
+	padding-bottom: 5px;
+}
+
+#FeaturesText {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: .8em;
+	font-weight: bolder;
+	margin-left: 30px;
+	padding: 5px;
+}
+
+#Footer {
+	margin-top: 30px;
+	padding-top: 20px;
+	text-align: center;
+	clear: right;
+}
+
+/*Reviews Index Page---------------------------------------------------*/
+
+#ReviewLinks1 {
+	width:300px;
+	padding-left: 5px;
+}
+
+/*Research and books*/
+
+#NavNumbers {
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+}
+
+/*Posters and Video Covers*/
+/*Poster Gallery Pages*/
+	
+#PosterBox{
+	width: 60%;
+	padding: 20px;
+	margin-left: auto ;
+    margin-right: auto ;
+}
+
+
+
+/*Video Covers*/
+
+#CoverMenu {
+ 	font-size: 20px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#CoverLinks{
+	padding: 10px;
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+}
+
+/*News Pages*/
+
+
+#newslinks {
+	padding: 10px;
+	width: 90%;
+	margin: 0 auto 0 auto;
+}
+
+#NewsText {
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	text-align: justify;
+	margin-left: auto ;
+    margin-right: auto ;
+	width: 90%;
+}
+
+#quad{
+	height: 900px;
+	/*background image set on individual pages*/
+    background-position: center center;
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+}
+
+#bignews{
+	background-color: white;
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	text-align: justify;
+	margin-left: auto ;
+    margin-right: auto ;
+	width: 80%;
+	border: 1px black solid;
+	padding: 5px;
+}
+
+#bignews img{
+	max-width: 100%;
+	height: auto;
+}
+
+#mainpromo{
+	background-color: #000000;
+	text-align: center;
+}
+
+#even{
+  padding: 5px;
+ }
+
+#odd{
+  background-color: #FFFFFF;
+  padding: 5px;
+}
+
+#trailer{
+	background-color: black;
+}
+
+/*trailer box - iframes*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Small Devices, Tablets */
+    @media (max-width: 1024px) {
+		/*magazine search*/
+		button{
+			width: 100%;
+			margin-top: 10px;
+			display: block;
+			
+			
+		}
+		
+		input{
+			width: 100%;
+		}
+	}
+
+
+

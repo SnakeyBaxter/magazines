@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Magazine Search</title>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="http://www.contamination-horror.co.uk/magazines/magazines.js"></script>
+<script src="watchdog.js"></script>
+<script src="rue_morgue.js"></script>
+<link href="contamination.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+#Wrapper{
+	padding: 5px;
+	border-radius: 10px;
+}
+
+h2{
+	padding-top: 10px;
+}
+
+#results{
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+
+input{
+    position: relative;
+	margin: 0 auto 0 auto;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+button{
+	position: relative;
+	margin-left: 30px;
+	color: white;
+	font-weight: bold;
+	background-color: black;
+	border-radius: 10px;
+}
+
+#content{
+    position: relative;
+    min-height: 100%;
+    background-color: #fff;
+	padding: 10px;
+	border: solid 2px black;
+	border-radius: 10px;
+	
+}
+</style>
+</head>
+
+<body class="myElement">
+
+<div id="Header"><h1>Magazine Database Search</h1></div>
+<div id="Wrapper"> 
+    <p>This is a work-in-progress. Enter a term to search the database of vintage horror film magazines and fanzines.</p>
+    <p>E.g search for a film title, part of film title, a director, or actor.</p>
+	<p>The first button searches various publications, the second searches for Video Watchdog reviews.</p>
+    <p>The database will grow when I get time to add data from my collection and other sources.</p>
+	
+	<div id="content"></div>
+</div>
+
+
+
+<script type="text/babel">
+		    
+	var MagSearch = React.createClass({
+					  
+		  search: function () {
+			
+			var query = document.getElementById("query").value.toUpperCase();
+			if(query){                      //don't allow empty text box
+				var results = document.getElementById("results");
+				var maghead = document.getElementById("mag_header");
+				results.innerHTML = "<br>";   //delete previous results
+				maghead.innerHTML = "<br>";
+				for(var i = 0; i < magazines.length; i++){	
+					for(var prop in magazines[i]) {
+						if(magazines[i][prop].includes(query)){
+							maghead.innerHTML = "<h2>Magazines containing " + query + ":</h2>";
+							results.innerHTML += "<p><strong>" + magazines[i]["Magazine"] + "</strong>" + " contains article on " + magazines[i][prop] + "</p>";
+			
+			
+							} 
+						} 
+					}
+				} else {
+					alert("Please enter a search term!");
+				}
+				
+		  },
+		  
+		 vwSearch: function(){
+			var query = document.getElementById("query").value.toUpperCase();
+			if(query){                      //don't allow empty text box
+				var maghead = document.getElementById("mag_header");
+				var results = document.getElementById("results");
+				results.innerHTML = "<br>"; //delete previous results
+				maghead.innerHTML = "<br>";
+				for(var v=0; v < watchdog.length; v++){
+					if(watchdog[v].includes(query)){
+						maghead.innerHTML = "<h2>Video Watchdogs containing " + query + ":</h2>";
+						results.innerHTML += "<p>" + watchdog[v] + "</p>";
+					}
+					
+				}
+			} else {
+					alert("Please enter a search term!");
+				}
+				
+		  },
+		  
+		  rueMorgueSearch: function(){
+			var query = document.getElementById("query").value.toUpperCase();
+			if(query){                      //don't allow empty text box
+				var maghead = document.getElementById("mag_header");
+				var results = document.getElementById("results");
+				results.innerHTML = "<br>"; //delete previous results
+				maghead.innerHTML = "<br>";
+				for(var r=0; r< rue_morgue.length; r++){
+					for(var article in rue_morgue[r]){
+						console.log(article);
+						if(rue_morgue[r][article].toUpperCase().includes(query)){
+							maghead.innerHTML = "<h2>Rue Morgue Magazines containing " + query + ":</h2>";
+							results.innerHTML += "<h2>" + rue_morgue[r][0] + " " + rue_morgue[r][1] + ": </h2>" +  "<p>" + rue_morgue[r][article] + "</p>";
+						}
+					}
+				}
+			} else {
+					alert("Please enter a search term!");
+				}
+				
+		  }, 
+
+		  render: function () {
+		  
+			return (
+					<div>
+						<input type="text" id="query"></input>
+						<button onClick = {this.search}>SEARCH</button>
+						<button onClick = {this.vwSearch}>VW-SEARCH</button>
+						<button onClick = {this.rueMorgueSearch}>Rue Morgue</button>
+						<div id="mag_header"></div>
+						<div id="results"></div>	
+					</div>
+					)
+			}
+		});
+        
+            
+			
+			
+	ReactDOM.render(
+		<MagSearch />, 
+		document.getElementById("content")
+	
+	);
+            
+</script>
+		
+
+
+</body>
+</html>
